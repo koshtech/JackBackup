@@ -43,8 +43,15 @@ Shoes.app(:title => "JackBackup", :width => 800, :height => 600, :resizable => t
                 @back = l.text
                 if @back == "Remote"
                     @backup_type.choose('Sync')
+                    @s.append( edit_line )
+                else
+                    @s.clear
                 end
-           end
+            end
+            @s = stack do
+                edit_line
+            end
+            @s.clear
         end
         stack do    
             button "Make the Backup!" do
