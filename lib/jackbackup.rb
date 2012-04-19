@@ -9,8 +9,7 @@ class JackBackup
             depured_options = ""
         end
         command = "#{command} -#{depured_options} #{source} #{destination}"
-       # return command
-        print command
+        return command
     end
 
     def self.run_command(command)
